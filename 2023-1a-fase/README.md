@@ -1,0 +1,13 @@
+# InterFatecs 2023 - Primeira Fase
+- [x] Aquecimento
+- [x] A blaittland
+- [ ] B fifteenlove
+- [x] C piramide
+- [x] D argasd
+- [x] E crausio
+- [x] F spins
+- [x] G silas
+- [x] H radar
+- [x] I foraminis
+- [x] J palindromo
+- [x] K evento
