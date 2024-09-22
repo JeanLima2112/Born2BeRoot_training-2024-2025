@@ -11,7 +11,7 @@ def debug(coords, depth):
 
 
 def backtracking(coords: list, y, x, h, w, depth=0):
-    coords[y][x] = "X"
+    coords[y][x] = "\033[0;34m" + 'X' + '\033[0m'
 
     # Adiciona o debug com a profundidade atual
     debug(coords, depth)
