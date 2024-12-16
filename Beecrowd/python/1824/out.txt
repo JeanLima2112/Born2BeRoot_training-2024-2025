@@ -1,0 +1,42 @@
+Instancia 1
+sim
+
+Instancia 2
+nao
+
+Instancia 3
+nao
+
+Instancia 4
+sim
+
+Instancia 5
+nao
+
+Instancia 6
+nao
+
+Instancia 7
+sim
+
+Instancia 8
+nao
+
+Instancia 9
+sim
+
+Instancia 10
+sim
+
+Instancia 11
+sim
+
+Instancia 12
+nao
+
+Instancia 13
+sim
+
+Instancia 14
+sim
+
