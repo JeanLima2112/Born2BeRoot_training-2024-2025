@@ -1,57 +1,34 @@
-import numpy as np
+enters = {}
+try:
+    index = 0
+    while True:
+        N = int(input())
+        enters[index] = N
+        index += 1
+except EOFError:
+    pass
 
-def matrix_exponentiation(mat, n):
-    """
-    Calcula a potência n da matriz mat usando exponenciação rápida.
-    
-    :param mat: matriz quadrada (numpy array)
-    :param n: potência (inteiro não negativo)
-    :return: mat^n
-    """
-    size = len(mat)
-    result = np.eye(size, dtype=int)  # Matriz identidade
-    base = np.array(mat, dtype=int)
+sorted_enters = {k: v for k, v in sorted(enters.items(), key=lambda item: item[1])}
 
-    while n > 0:
-        if n % 2 == 1:
-            result = np.dot(result, base)
-        base = np.dot(base, base)
-        n //= 2
+c, b, a = 1, 2, 2
+last_calculated = 3
+new_value = 0
 
-    return result
+for key, value in sorted_enters.items():
+    if value == 1: 
+        sorted_enters[key] = 1
+    elif value == 2: 
+        sorted_enters[key] = 2
+    elif value == 3: 
+        sorted_enters[key] = 2
+    else:
+        while last_calculated + 1 <= value:  
+            new_value = (b + c) % (10**9 + 7)
+            c, b, a = b, a, new_value
+            last_calculated += 1
+        sorted_enters[key] = new_value  
 
-def solve_recurrence(n):
-    """
-    Resolve a recorrência F(n) = F(n-2) + F(n-3) usando exponenciação de matriz.
-    
-    :param n: Termo desejado (inteiro não negativo)
-    :return: Valor de F(n)
-    """
-    F0, F1, F2 = 1, 2, 2  # Vetor inicial
-    
-    if n == 0:
-        return F0
-    if n == 1:
-        return F1
-    if n == 2:
-        return F2
+sorted_enters = {k: v for k, v in sorted(sorted_enters.items())}
 
-    # Matriz de transição
-    transition_matrix = [
-        [0, 1, 1],
-        [1, 0, 0],
-        [0, 1, 0]
-    ]
-    
-    # Elevar a matriz à potência (n-2)
-    result_matrix = matrix_exponentiation(transition_matrix, n-2)
-    
-    # Multiplicar pela matriz inicial [F(2), F(1), F(0)]
-    initial_vector = [F2, F1, F0]
-    Fn = np.dot(result_matrix, initial_vector)
-    
-    return Fn[0]  # O primeiro elemento é F(n)
-
-n = 5
-result = solve_recurrence(n)
-print(f"F({n}) = {result}")
+for key, value in sorted_enters.items():
+    print(value)
