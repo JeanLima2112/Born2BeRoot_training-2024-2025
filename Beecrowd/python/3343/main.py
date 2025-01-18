@@ -21,8 +21,7 @@ for titan in TG:
             dicionario[titan][0] = c
             break
     if mudou != True:
-        paredes.append(TM)
-        paredes[c+1] -= dicionario[titan][1]
+        paredes.append(TM - dicionario[titan][1])
         dicionario[titan][0] = c+1
 
 
