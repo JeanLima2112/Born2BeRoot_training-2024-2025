@@ -6,13 +6,19 @@ def gcd(a: int, b: int) -> int:
         a, b = b, a % b
     return a
 
-for _ in range(0, n_queries):
-    querie = list(map(int, input().split()))
-    if querie[0] == 1:
-        for c in range(querie[1]-1,querie[2]):
-            vetor[c] += querie[3]
-    else:
-        result = vetor[querie[1-1]]
-        for c in range(querie[1]-1,querie[2]):
-           result = gcd(result,vetor[c])
-        print(result)
+try:
+    while True:
+        querie = list(map(int, input().split()))
+        if querie[0] == 1:
+            for c in range(querie[1]-1,querie[2]):
+                vetor[c] += querie[3]
+        else:
+            result = vetor[querie[1]]
+            for c in range(querie[1]-1,querie[2]):
+                result = gcd(result,vetor[c])
+            print(result)
+except EOFError:
+    pass
+
+
+   
