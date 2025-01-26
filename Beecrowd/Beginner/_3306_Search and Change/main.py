@@ -7,9 +7,11 @@ def gcd(a: int, b: int) -> int:
     return a
 
 try:
-    while True:
+    for _ in range(1,n_queries+1):
         querie = list(map(int, input().split()))
-        if querie[0] == 1:
+        if len(querie) < 3:
+            print(_)
+        elif querie[0] == 1:
             for c in range(querie[1]-1,querie[2]):
                 vetor[c] += querie[3]
         else:
@@ -18,6 +20,7 @@ try:
                 result = gcd(result,vetor[c])
             print(result)
 except EOFError:
+    print(n_queries)
     pass
 
 
