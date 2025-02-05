@@ -1,0 +1,3 @@
+windows-curses==2.1.0  # Apenas para Windows
+#No terminal rode  "pip install -r requirements.txt" para instalar todas as dependências de uma vez só.
+
