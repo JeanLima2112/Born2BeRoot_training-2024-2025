@@ -68,7 +68,7 @@ def main(stdscr):
 
     if not os.path.exists(solution_path):
         with open(solution_path, "w") as f:
-            f.write(f"#Solution in {language_choice}")
+            f.write("")
     
     if not os.path.exists(in_txt_path):
         with open(in_txt_path, "w") as f:
