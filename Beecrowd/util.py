@@ -68,7 +68,16 @@ def main(stdscr):
 
     if not os.path.exists(solution_path):
         with open(solution_path, "w") as f:
-            f.write("")
+             if language_choice == "C++":
+                f.write("""#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    
+    return 0;
+}
+""")
     
     if not os.path.exists(in_txt_path):
         with open(in_txt_path, "w") as f:
