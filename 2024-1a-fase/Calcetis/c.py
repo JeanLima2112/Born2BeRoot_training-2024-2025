@@ -1,15 +1,16 @@
 X, Y = map(int, input().split())
 lista =[]
-contador = {}
+contador = {i: 0 for i in range(30, 201)}
 a_ser_achado = 200 - X
 for _ in range (Y):
     aux = int(input())
-    if aux < a_ser_achado:
-        if contador.get(aux ,0):
+    if aux < a_ser_achado -1:
+        if contador[aux]< 3:
             lista.append(aux)
-            contador[aux] = contador.get(aux, 0) + 1
+            contador[aux] +=1
 
 lista.sort()
+print(lista)
 Y = len(lista)
 
 
@@ -26,5 +27,3 @@ for i in range(Y-2):
         else:
             right -= 1
 print("fretepago")
-
-
