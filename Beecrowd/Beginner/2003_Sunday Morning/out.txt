@@ -1,0 +1,12 @@
+Atraso maximo: 10
+Atraso maximo: 0
+Atraso maximo: 0
+Atraso maximo: 0
+Atraso maximo: 0
+Atraso maximo: 30
+Atraso maximo: 23
+Atraso maximo: 60
+Atraso maximo: 92
+Atraso maximo: 115
+Atraso maximo: 120
+Atraso maximo: 55

@@ -1,5 +1,6 @@
 import os
 import curses
+import random
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,11 +34,10 @@ def menu(stdscr, title, options):
             return options[current_row]
 
 def main(stdscr):
-    languages = {"Python": ".py", "JavaScript": ".js", "Java": ".java", "C++": ".cpp", "TypeScript": ".ts", "C": ".c"}
+    languages = {"Python": ".py", "JavaScript": ".js", "Java": ".java", "C++": ".cpp", "TypeScript": ".ts", "C": ".c", "Aleatório": "Aleatório"}
     categories = [d for d in os.listdir(BASE_DIR) if os.path.isdir(os.path.join(BASE_DIR, d)) and d != "__pycache__"]
     
     category_choice = menu(stdscr, "Escolha a categoria:", categories)
-
 
     stdscr.clear()
     stdscr.addstr(0, 0, "Digite o número do exercício: ")
@@ -46,7 +46,6 @@ def main(stdscr):
     exercise_number = stdscr.getstr().decode("utf-8").strip()
     curses.noecho()
     
-
     stdscr.clear()
     stdscr.addstr(0, 0, "Digite o título do exercício: ")
     stdscr.refresh()
@@ -54,10 +53,12 @@ def main(stdscr):
     exercise_title = stdscr.getstr().decode("utf-8").strip()
     curses.noecho()
 
-
     exercise_name = f"{exercise_number}_{exercise_title}"
 
     language_choice = menu(stdscr, "Escolha a linguagem:", list(languages.keys()))
+
+    if language_choice == "Aleatório":
+        language_choice = random.choice(["Python", "C++"])
 
     exercise_path = os.path.join(BASE_DIR, category_choice, exercise_name)
     os.makedirs(exercise_path, exist_ok=True)
