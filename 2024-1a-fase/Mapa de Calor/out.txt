@@ -1,2 +1,1 @@
-[('superior', 6), ('esquerda', 6), ('direita', 6), ('inferior', 6), ('centro', 4)]
 superior
