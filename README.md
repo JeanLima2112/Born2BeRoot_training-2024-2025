@@ -4,8 +4,8 @@ Born2BeRoot é uma equipe competitiva de programação formada por estudantes ap
 Desde sua criação, o time tem se destacado em competições regionais e estaduais, demonstrando habilidades avançadas em lógica, programação e trabalho em equipe.  
 
 ### Resultados Anteriores  
-- **12ª Edição do InterFatecs (2022)**: 16º lugar na fase final
-- **13ª Edição do InterFatecs (2023)**: 11º lugar na fase final 
+- **12ª Edição do InterFatecs (2023)**: 16º lugar na fase final
+- **13ª Edição do InterFatecs (2024)**: 11º lugar na fase final 
 
 Com espírito de aprendizado contínuo e paixão pela programação, Born2BeRoot busca constantemente melhorar seu desempenho e alcançar posições de destaque em competições futuras.
 
