@@ -1,0 +1,20 @@
+import re 
+try:
+    while True:
+        X = input()
+
+        if re.fullmatch(r"[AP]\d{1,5}",X):
+            print("Placa muito antiga")
+        elif re.fullmatch(r"d{1,7}",X):
+            print("Placa numerica")
+        elif re.fullmatch(r"[A-Z]{2}\d{4}",X):
+            print("Placa AA-9999") 
+        elif re.fullmatch(r"[A-Z]{3}\d{4}",X):
+            print("Placa AAA-9999")
+        elif re.fullmatch(r"[A-Z]{3}\d{1}\[A-Z]{1}\d{2}",X):
+            print("Placa Mercosul")
+        else:
+            print("Placa invalida")
+
+except EOFError:
+     pass
